@@ -944,7 +944,7 @@ class PaymentInitRequest extends SignBase
   public float $totalAmount;
   public string $currency;
   public string $orderNo;
-  public string $payOperation; //[payment, oneclickPayment, customPayment]
+  public string $payOperation; //[payment, oneclickPayment]
   public string $payMethod; //[card, cart#LVP]
   public bool $closePayment;
 
@@ -959,11 +959,6 @@ class PaymentInitRequest extends SignBase
   public string $merchantData;
   public string $language;
   public int $ttlSec;
-  public string $logoVersion;
-  public string $colorSchemeVersion;
-  public string $customExpiry;
-  /** @var Extension[] */
-  public $extensions;
 
   function toSign(): string
   {
@@ -1005,12 +1000,6 @@ class PaymentInitRequest extends SignBase
       $sb = ApiUtilsAdd($sb, $this->language);
     if (isset($this->ttlSec))
       $sb = ApiUtilsAdd($sb, $this->ttlSec);
-    if (isset($this->logoVersion))
-      $sb = ApiUtilsAdd($sb, $this->logoVersion);
-    if (isset($this->colorSchemeVersion))
-      $sb = ApiUtilsAdd($sb, $this->colorSchemeVersion);
-    if (isset($this->customExpiry))
-      $sb = ApiUtilsAdd($sb, $this->customExpiry);
     return $this->removeLast($sb);
   }
 }
