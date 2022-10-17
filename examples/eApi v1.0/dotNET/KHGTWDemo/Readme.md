@@ -3,13 +3,13 @@ Requirements:
 - installed DotNet 6.x.x
 
 1. Download and unzip or clone git repository for K&H payment gateway
-   (https://github.com/khpos/Payment-Gateway)
+   (https://github.com/khpos/Payment-Gateway_EN)
 
 2. Configure
 
     1. configure **Common.Constants**
        a. setup url of K&H payment gateway for given environment, i.e. for integration environment set to value
-       > public const string GatewayUrl = "https://pay.sandbox.khpos.hu/api/v1.0";
+       > public const string GatewayUrl = "https://api.sandbox.khpos.hu/api/v1.0";
 
        b. setup path to public key of K&H payment gateway, e.g.
        > public const string MipsPublicKey = "./config/mips_pay.sandbox.khpos.hu.pub";
@@ -104,10 +104,3 @@ Requirements:
 
    > KHGatewayClientExample.exe -m GOOGLEPAY_PROCESS -p <pay-id-from-previous-googlepay-init-call>
 
-   #### button init
-
-   > KHGatewayClientExample.exe -m BUTTON_INIT -i .\config\button-init-base.json
-
-
-   available options for a <reason> are: aborted | other_payment | undeliverable | unavailable | abandoned | changed |
-   unprocessed
