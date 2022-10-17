@@ -105,12 +105,6 @@ Requirements:
 	  run.sh  -m ONECLICK_PROCESS -p <pay-id-from-previous-oneclick-init-call>
       ```
    
-    #### echo customer 
-      ```
-	  run.bat -m ECHO_CUSTOMER -c <customer-id>
-	  run.sh  -m ECHO_CUSTOMER -c <customer-id>
-      ```
-   
     #### applepay echo
       ```
       run.bat -m APPLEPAY_ECHO
