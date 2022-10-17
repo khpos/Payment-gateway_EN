@@ -40,10 +40,6 @@ Requirements:
 
    > KHGatewayClientExample.exe -m PAYMENT_INIT -i config\payment-init-oneclick-base.json
 
-   #### payment init (custom payment)
-
-   > KHGatewayClientExample.exe -m PAYMENT_INIT -i config\payment-init-custom-base.json
-
    #### payment process
 
    > KHGatewayClientExample.exe -m PAYMENT_PROCESS -p <pay-id-from-previous-payment-init-call>
@@ -83,10 +79,6 @@ Requirements:
    #### oneclick process
 
    > KHGatewayClientExample.exe -m  ONECLICK_PROCESS -p <pay-id-from-previous-oneclick-init-call>
-
-   #### echo customer
-
-   > KHGatewayClientExample.exe -m ECHO_CUSTOMER -c <customer-id>
 
    #### applepay echo
 
