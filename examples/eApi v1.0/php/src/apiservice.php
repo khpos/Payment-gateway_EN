@@ -307,10 +307,7 @@ abstract class SignBase implements Signable
 
   protected function removeLast(string $data2Sign): string
   {
-    if (strlen($data2Sign) >= 1 && $data2Sign[strlen($data2Sign) - 1] == '|') {
-      $data2Sign = substr($data2Sign, 0, strlen($data2Sign) - 1);
-    }
-    return $data2Sign;
+    return rtrim($data2Sign, '|');
   }
 }
 
